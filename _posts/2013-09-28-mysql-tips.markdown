@@ -58,7 +58,7 @@ MySQLdb 的一个 connection 是不支持多线程的。要想支持多线程，
 然后就是给用户提升权限，让他可以 remote 连接。
 
 ```sql
-grant all on *.* to adminm@’%’ identified by ’123456′
+grant all on *.* to adminm@'%' identified by '123456'
 ```
 
 ## mysql text limit
