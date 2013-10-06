@@ -4,7 +4,7 @@ comments: true
 date: 2012-05-04 17:21:41+00:00
 layout: post
 slug: poj-1014
-title: poj 1014
+title: POJ 1014
 wordpress_id: 281
 categories:
 - acm
