@@ -15,6 +15,12 @@ tags:
 
 最近又写 python 了，感觉好久不写又手生了。用 mysql 导数据，记下点东西吧。
 
+## python-MySQLdb 的安装
+
+在安装 pip 之前需要执行
+
+    apt-get install libmysqlclient-dev python-dev
+
 ## 关于中文
 
 ### table creation
@@ -45,6 +51,21 @@ CREATE TABLE `projects` (
 ### python lang support
 
 python 2 3 分离确实是个很让人揪心的事情。虽说 python3 已经对于 unicode 做了很好的支持，但是可惜 python3 一直发展不起来。我还是要苦逼的用着 python2.7 每次对于 string 都要自己去做一下转换。在把 string 扔给 MySQLdb 之前都要搞成 unicode 的。
+
+### setdefaultencoding
+
+通常在 linux 系统中的默认编码是 'ascii' 这导致 `urllib2.urlopen().read()` 出来的结果会有一些问题。
+
+```
+reload(sys)
+sys.setdefaultencoding('utf-8')
+```
+
+这样会避免很多问题。
+
+然后 [HOWTO UNICODE](http://docs.python.org/2/howto/unicode.html) 对于编码问题讲的非常的透彻。
+
+
 
 ### python MySQLdb
 
